@@ -1,0 +1,8 @@
+# Files not uploaded
+*~
+x.*
+catch.hpp
+
+# Folders ommited
+build/
+
