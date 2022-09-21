@@ -20,7 +20,9 @@ add_executable(${TARGET_NAME} main.cpp)
 # Add the sources
 target_sources(${TARGET_NAME} PRIVATE
   primes_test.cpp
+  digits_test.cpp
   ../src/primes.cpp
+  ../src/digits.cpp
   )
 
 # Include folders of directories
