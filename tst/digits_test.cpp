@@ -121,3 +121,31 @@ SCENARIO( "#is_bouncy_number" ){
     }
   }
 }
+
+
+SCENARIO( "#sum_digits" ){
+
+  GIVEN( "A positive number" ){
+
+    THEN( "must return the sum of its digits" ){
+      REQUIRE(sum_digits(1234) == 10);
+      REQUIRE(sum_digits(778899) == 48);
+      REQUIRE(sum_digits(1333579) == 31);
+      REQUIRE(sum_digits(268) == 16);
+    }
+  }
+}
+
+
+SCENARIO( "#sum_digits_string" ){
+
+  GIVEN( "A string of numbers" ){
+
+    THEN( "must return the sum of its digits" ){
+      REQUIRE(sum_digits_string("1234") == 10);
+      REQUIRE(sum_digits_string("778899") == 48);
+      REQUIRE(sum_digits_string("1333579") == 31);
+      REQUIRE(sum_digits_string("268") == 16);
+    }
+  }
+}

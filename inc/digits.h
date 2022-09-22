@@ -10,6 +10,9 @@
 #define DIGITS_H
 
 
+#include <string>
+
+
 /**
  * @brief The function check if @p num is an increasing number (the digits,
  * from left to right, are always equal or greater)
@@ -51,6 +54,22 @@ bool is_palindrome(unsigned int num);
  * @return @p num but reversed
  */
 unsigned int reverse(unsigned int num);
+
+
+/**
+ * @brief Sum digits via decomposition of the number
+ * @param num Number to be summed
+ * @return Sum of @p num digits
+ */
+unsigned int sum_digits(unsigned long int num);
+
+
+/**
+ * @brief Sum digits via ASCII code
+ * @param num String number to be summed
+ * @return Sum of @p num digits
+ */
+unsigned int sum_digits_string(std::string num);
 
 
 #endif
