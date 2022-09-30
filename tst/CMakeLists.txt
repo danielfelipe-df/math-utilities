@@ -22,9 +22,11 @@ target_sources(${TARGET_NAME} PRIVATE
   primes_test.cpp
   digits_test.cpp
   divisors_test.cpp
+  fractions_test.cpp
   ../src/primes.cpp
   ../src/digits.cpp
   ../src/divisors.cpp
+  ../src/fractions.cpp
   )
 
 # Include folders of directories
@@ -32,6 +34,14 @@ target_include_directories(${TARGET_NAME} PUBLIC
   ./
   ../inc/
   )
+
+# Add flags
+target_compile_options(${TARGET_NAME} PRIVATE
+  -Wall  -Werror  -g  -lgmp  -lgmpxx
+  )
+
+# Add the flags for the sanitizer
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -fsanitize=address -fsanitize=leak")
 
 # Add the tests
 add_test(
