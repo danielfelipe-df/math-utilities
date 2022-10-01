@@ -23,6 +23,20 @@ bool is_terminating_decimal(unsigned long int numerator, unsigned long int denom
 
 
 /**
+ * @brief Check if the fraction @p numerator / * @p denominator is a terminating
+ * decimal. For example, 1/6 = 0.1(6) is a non-terminating decimal because has
+ * a cycle. In the case 1/7 = 0.(142857) we get a non-terminating decimal. And
+ * 1/4 = 0.25 is a terminating decimal, is not periodical and finite.
+ * This algrithm use the fact that if the denominator is only divisible by 2
+ * and/or 5 then is terminating decimal.
+ * @param numerator Fraction's numerator
+ * @param denominator Fraction's numerator
+ * @return True if is terminating decimal, False if not.
+ */
+bool is_terminating_decimal_2(unsigned long int numerator, unsigned long int denominator);
+
+
+/**
  * @brief Calculate the length of decimal cycle of the fraction @p numerator /
  * @p denominator. For example, in 1/6 = 0.1(6) the length is 1 because is only
  * 6. In the case 1/7 = 0.(142857) the length is 6. And in the case 1/4 = 0.25

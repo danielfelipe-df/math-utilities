@@ -21,7 +21,7 @@ SCENARIO( "#is_terminating_decimal" ){
       THEN( "must return true" ){
 	REQUIRE(is_terminating_decimal(1, 2) == true);
 	REQUIRE(is_terminating_decimal(1, 500) == true);
-	REQUIRE(is_terminating_decimal(32, 4) == true);
+	REQUIRE(is_terminating_decimal(36, 12) == true);
 	REQUIRE(is_terminating_decimal(1479, 20) == true);
       }
     }
@@ -33,6 +33,33 @@ SCENARIO( "#is_terminating_decimal" ){
 	REQUIRE(is_terminating_decimal(1, 551) == false);
 	REQUIRE(is_terminating_decimal(32, 7) == false);
 	REQUIRE(is_terminating_decimal(1479, 31) == false);
+      }
+    }
+  }
+}
+
+
+SCENARIO( "#is_terminating_decimal_2" ){
+
+  GIVEN( "Numerator and denominator positives" ){
+
+    WHEN( "construct a terminating decimal fraction" ){
+
+      THEN( "must return true" ){
+	REQUIRE(is_terminating_decimal_2(1, 2) == true);
+	REQUIRE(is_terminating_decimal_2(1, 500) == true);
+	REQUIRE(is_terminating_decimal_2(36, 12) == true);
+	REQUIRE(is_terminating_decimal_2(1479, 20) == true);
+      }
+    }
+
+    WHEN( "construct a non-terminating decimal fraction" ){
+
+      THEN( "must return false" ){
+	REQUIRE(is_terminating_decimal_2(1, 3) == false);
+	REQUIRE(is_terminating_decimal_2(1, 551) == false);
+	REQUIRE(is_terminating_decimal_2(32, 7) == false);
+	REQUIRE(is_terminating_decimal_2(1479, 31) == false);
       }
     }
   }

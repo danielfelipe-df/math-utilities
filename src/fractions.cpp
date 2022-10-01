@@ -45,8 +45,32 @@ bool is_terminating_decimal(unsigned long int numerator, unsigned long int denom
     remainder = remainder%denominator;
   }
 
-  // Return the length of the cycle
+  // If remainder is zero then is a terminating decimal
   return remainder == 0;
+}
+
+
+bool is_terminating_decimal_2(unsigned long int numerator, unsigned long int denominator){
+  // If denominator divides numerator then the fraction is an integer, so is terminating
+  if(numerator%denominator == 0)
+    return true;
+
+  // Calculate GCD in order to reduce numerator and denominator to minimum values
+  // and then do easier calculates
+  unsigned long int gcd = gcd_euclides(numerator, denominator);
+  denominator /= gcd;
+
+  // Divides denominator by 2 if is divisible
+  while(denominator%2 == 0)
+    denominator /= 2;
+
+  // Divides denominator by 5 if is divisible
+  while(denominator%5 == 0)
+    denominator /= 5;
+
+  // If denominator is equal to 1 then it is only divisible by 2 and/or 5,
+  // so is terminating decimal. Otherwise is not.
+  return denominator == 1;
 }
 
 
