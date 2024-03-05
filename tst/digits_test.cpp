@@ -123,6 +123,47 @@ SCENARIO( "#is_bouncy_number" ){
 }
 
 
+SCENARIO( "#is_palindrome" ){
+
+  GIVEN( "An integer positive number" ){
+
+    WHEN( "it is a palindrome number" ){
+
+      THEN( "must return true"){
+	REQUIRE(is_palindrome(12321) == true);
+	REQUIRE(is_palindrome(1221) == true);
+	REQUIRE(is_palindrome(98766789) == true);
+	REQUIRE(is_palindrome(101) == true);
+      }
+    }
+
+    WHEN( "it is not a palindrome number" ){
+
+      THEN( "must return false"){
+	REQUIRE(is_palindrome(1321) == false);
+	REQUIRE(is_palindrome(12681) == false);
+	REQUIRE(is_palindrome(99769976) == false);
+	REQUIRE(is_palindrome(10) == false);
+      }
+    }
+  }
+}
+
+
+SCENARIO( "#reverse" ){
+
+  GIVEN( "An integer positive number" ){
+
+    THEN( "must return it's reverse number"){
+      REQUIRE(reverse(12000) == 21);
+      REQUIRE(reverse(1221) == 1221);
+      REQUIRE(reverse(98398872) == 27889389);
+      REQUIRE(reverse(101011) == 110101);
+    }
+  }
+}
+
+
 SCENARIO( "#sum_digits" ){
 
   GIVEN( "A positive number" ){
