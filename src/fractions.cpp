@@ -14,6 +14,7 @@
 #include <algorithm>
 #include <map>
 #include <string>
+#include <stdexcept>
 
 
 bool is_terminating_decimal(unsigned long int numerator, unsigned long int denominator){
