@@ -75,3 +75,30 @@ SCENARIO( "#is_rare_prime" ){
     }
   }
 }
+
+
+SCENARIO( "#is_odd_prime" ){
+
+  GIVEN( "A positive odd_number" ){
+
+    WHEN( "it is a prime number" ){
+
+      THEN( "must return true" ){
+	REQUIRE(is_odd_prime(13) == true);
+	REQUIRE(is_odd_prime(643) == true);
+	REQUIRE(is_odd_prime(5653) == true);
+	REQUIRE(is_odd_prime(7919) == true);
+      }
+    }
+
+    WHEN( "it is not a prime number" ){
+
+      THEN( "must return false" ){
+	REQUIRE(is_odd_prime(15) == false);
+	REQUIRE(is_odd_prime(651) == false);
+	REQUIRE(is_odd_prime(7917) == false);
+	REQUIRE(is_odd_prime(791913) == false);
+      }
+    }
+  }
+}

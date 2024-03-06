@@ -30,7 +30,7 @@ bool is_rare_prime(unsigned int num);
  * @param num Odd number to be checked
  * @return True if is prime, False if not
  */
-bool odd_is_prime(unsigned int num);
+bool is_odd_prime(unsigned int num);
 
 
 #endif

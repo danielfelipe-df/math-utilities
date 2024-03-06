@@ -65,7 +65,7 @@ bool is_rare_prime(unsigned int num){
 }
 
 
-bool odd_is_prime(unsigned int num){
+bool is_odd_prime(unsigned int num){
   // Loop over odd numbers below equal sqrt
   for(unsigned int i=3; i*i<=num; i+=2)
     // If i is a divisor, is not prime
