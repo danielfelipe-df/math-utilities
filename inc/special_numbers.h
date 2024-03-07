@@ -12,7 +12,7 @@
  * @param num Number to be tested as a Harshad number.
  * @return True if is a Harshad number, False otherwise.
  */
-bool is_Harshad_number(unsigned long int num, unsigned int sum_dig);
+bool is_Harshad_number(unsigned long int num);
 
 
 /**
@@ -21,4 +21,4 @@ bool is_Harshad_number(unsigned long int num, unsigned int sum_dig);
  * @param num Number to be tested as a strong Harshad number.
  * @return True if is a strong Harshad number, False otherwise.
  */
-bool is_strong_Harshad_number(unsigned long int num, unsigned int sum_dig);
+bool is_strong_Harshad_number(unsigned long int num);

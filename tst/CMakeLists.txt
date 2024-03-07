@@ -23,10 +23,12 @@ target_sources(${TARGET_NAME} PRIVATE
   digits_test.cpp
   divisors_test.cpp
   fractions_test.cpp
+  special_numbers_test.cpp
   ../src/primes.cpp
   ../src/digits.cpp
   ../src/divisors.cpp
   ../src/fractions.cpp
+  ../src/special_numbers.cpp
   )
 
 # Include folders of directories
