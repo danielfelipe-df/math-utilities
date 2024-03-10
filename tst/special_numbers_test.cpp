@@ -66,3 +66,32 @@ SCENARIO( "#is_strong_Harshad_number" ){
     }
   }
 }
+
+
+
+SCENARIO( "#is_right_truncatable_Harshad_number" ){
+
+  GIVEN( "A positive number" ){
+
+    WHEN( "it is a right truncatable Harshad number" ){
+
+      THEN( "must return true" ){
+	REQUIRE(is_right_truncatable_Harshad_number(201) == true);
+	REQUIRE(is_right_truncatable_Harshad_number(2478) == true);
+	REQUIRE(is_right_truncatable_Harshad_number(84063) == true);
+	REQUIRE(is_right_truncatable_Harshad_number(4002038) == true);
+      }
+    }
+
+
+    WHEN( "it is not a right truncatable Harshad number" ){
+
+      THEN( "must return false" ){
+	REQUIRE(is_right_truncatable_Harshad_number(11) == false);
+	REQUIRE(is_right_truncatable_Harshad_number(12751220) == false);
+	REQUIRE(is_right_truncatable_Harshad_number(89790) == false);
+	REQUIRE(is_right_truncatable_Harshad_number(400237) == false);
+      }
+    }
+  }
+}
