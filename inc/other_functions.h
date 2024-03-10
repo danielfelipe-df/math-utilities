@@ -11,22 +11,6 @@
 
 
 /**
- * @brief A *right truncatable Harshad number* is a number that, while
- * recursively truncating the last digit, always results in a Harshard number.
- * In this algorithm we construct the greaters Harshad numbers from a Harshad
- * number given. If @p num is 1, then 12 is constructed. When a right
- * truncatable Harshard number is found, then we check if is SRHTP number. Then
- * add it to @p sum.
- * @param num Number to be tested as a right truncatable Harshad number.
- * @param sum_digit The sum digit of @p num.
- * @param sum Variable where we save the sum of SRHTP numbers.
- * @param limit Variable give the upper limit of Harshad numbers.
- * @return True if is a right truncatable Harshad number, False otherwise.
- */
-void SRHTP_number(unsigned long int num, unsigned int sum_dig, unsigned long int &sum, unsigned long int limit);
-
-
-/**
  * @brief Evaluate the Euler's Totient function for the value @p n using the
  * property \phi(n) = n\prod_{p|n}(1 - 1/p) where p is a prime who divides @p n.
  * The algorithm used is a self variation of the last count found in

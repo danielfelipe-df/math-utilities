@@ -95,3 +95,32 @@ SCENARIO( "#is_right_truncatable_Harshad_number" ){
     }
   }
 }
+
+
+
+SCENARIO( "#is_strong_right_truncatable_Harshad_number" ){
+
+  GIVEN( "A positive number" ){
+
+    WHEN( "it is a strong right truncatable Harshad number" ){
+
+      THEN( "must return true" ){
+	REQUIRE(is_right_truncatable_Harshad_number(201) == true);
+	REQUIRE(is_right_truncatable_Harshad_number(8406) == true);
+	REQUIRE(is_right_truncatable_Harshad_number(40806) == true);
+	REQUIRE(is_right_truncatable_Harshad_number(2408041) == true);
+      }
+    }
+
+
+    WHEN( "it is not a strong right truncatable Harshad number" ){
+
+      THEN( "must return false" ){
+	REQUIRE(is_right_truncatable_Harshad_number(211) == false);
+	REQUIRE(is_right_truncatable_Harshad_number(12751220) == false);
+	REQUIRE(is_right_truncatable_Harshad_number(89790) == false);
+	REQUIRE(is_right_truncatable_Harshad_number(400237) == false);
+      }
+    }
+  }
+}

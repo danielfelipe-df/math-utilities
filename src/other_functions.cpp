@@ -10,34 +10,6 @@
 #include <string>
 
 
-void SRHTP_number(unsigned long int num, unsigned int sum_dig, unsigned long int &sum, unsigned long int limit){
-  // Check if the num is less than the limit
-  if(num < limit){
-    // Loop over all possible new digits
-    for(unsigned long int i=0; i<10; i++){
-      // Check if the new constructed number, based on num (a Harshad number), is a Harshad number too
-      if(Harshad_number(num*10 + i, sum_dig + i)){
-
-	// Check if the new constructed number is a strong Harshad number
-	if(strong_Harshad_number(num*10 + i, sum_dig + i)){
-
-	  // Loop over odd digits, because those can be prime
-	  for(unsigned int j=1; j<10; j+=2){
-	    // Check if the new new constructed number is prime, and add.
-	    if(is_prime((num*10 + i)*10 + j)){
-	      sum += (num*10 + i)*10 + j;
-	    }
-	  }
-	}
-
-	// Look for the new right truncatable Harshad numbers based on the new one
-	SRHTP_number(num*10 + i, sum_dig + i, sum, limit);
-      }
-    }
-  }
-}
-
-
 unsigned int Euler_Totient_Function(unsigned int n){
   unsigned int result = n; //Init the result
 

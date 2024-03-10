@@ -56,42 +56,16 @@ bool is_right_truncatable_Harshad_number(size_t num){
     return true;
 }
 
-/*
-bool is_strong_right_truncatable_harshad_prime_number(unsigned long int num){
 
-  // Check if num is prime
-  if(is_prime(num)){
+bool is_strong_right_truncatable_Harshad_number(unsigned long int num){
 
-    size_t truncated_num = num/10;
+  // Check the num is Strong Harshad number
+  if(is_strong_Harshad_number(num))
 
-  }
+    // Because is strong Harshad number, then we can right truncate it and check if is Right Truncatable Harshad number
+    if(is_right_truncatable_Harshad_number(num/10))
+      return true;
 
-  // If not is prime, then is not SRTHP number
+  // If num does not get true in both statement is not a Strong Right Truncatable Harshad number
   return false;
-
-  // Check if the num is less than the limit
-  if(num < limit){
-    // Loop over all possible new digits
-    for(unsigned long int i=0; i<10; i++){
-      // Check if the new constructed number, based on num (a Harshad number), is a Harshad number too
-      if(is_Harshad_number(num*10 + i, sum_dig + i)){
-
-	// Check if the new constructed number is a strong Harshad number
-	if(is_strong_Harshad_number(num*10 + i, sum_dig + i)){
-
-	  // Loop over odd digits, because those can be prime
-	  for(unsigned int j=1; j<10; j+=2){
-	    // Check if the new new constructed number is prime, and add.
-	    if(is_prime((num*10 + i)*10 + j)){
-	      sum += (num*10 + i)*10 + j;
-	    }
-	  }
-	}
-
-	// Look for the new right truncatable Harshad numbers based on the new one
-	SRHTP_number(num*10 + i, sum_dig + i, sum, limit);
-      }
-    }
-  }
 }
-*/
