@@ -2,7 +2,7 @@
  * @file digits.h
  * @author Daniel Felipe <danielfoc@protonmail.com>
  * @date 21/09/2022
- * @brief
+ * @brief Header file of file which are mainly related to digits
  */
 
 
@@ -19,7 +19,7 @@
  * @param num Number to be checked
  * @return True if it is an increasing number, otherwise False
  */
-bool is_increasing_number(unsigned int num);
+bool is_increasing_number(size_t num);
 
 
 /**
@@ -28,7 +28,7 @@ bool is_increasing_number(unsigned int num);
  * @param num Number to be checked
  * @return True if it is a decreasing number, otherwise False
  */
-bool is_decreasing_number(unsigned int num);
+bool is_decreasing_number(size_t num);
 
 
 /**
@@ -37,7 +37,7 @@ bool is_decreasing_number(unsigned int num);
  * @param num Number to be checked.
  * @return True if it is a bouncy number, otherwise False
  */
-bool is_bouncy_number(unsigned int num);
+bool is_bouncy_number(size_t num);
 
 
 /**
@@ -45,7 +45,7 @@ bool is_bouncy_number(unsigned int num);
  * @param num Number to be checked
  * @return True if @p num is palindrome, False if not
  */
-bool is_palindrome(unsigned int num);
+bool is_palindrome(size_t num);
 
 
 /**
@@ -53,7 +53,7 @@ bool is_palindrome(unsigned int num);
  * @param num Number to be reversed
  * @return @p num but reversed
  */
-unsigned int reverse(unsigned int num);
+size_t reverse(size_t num);
 
 
 /**
@@ -61,7 +61,7 @@ unsigned int reverse(unsigned int num);
  * @param num Number to be summed
  * @return Sum of @p num digits
  */
-unsigned int sum_digits(unsigned long int num);
+size_t sum_digits(size_t num);
 
 
 /**
@@ -69,7 +69,7 @@ unsigned int sum_digits(unsigned long int num);
  * @param num String number to be summed
  * @return Sum of @p num digits
  */
-unsigned int sum_digits_string(std::string num);
+size_t sum_digits_string(std::string num);
 
 
 #endif

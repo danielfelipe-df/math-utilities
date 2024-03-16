@@ -2,16 +2,16 @@
  * @file digits.cpp
  * @author Daniel Felipe <danielfoc@protonmail.com>
  * @date 21/09/2022
- * @brief
+ * @brief Source file of functions which are mainly related to digits
  */
 
 
 #include <digits.h>
 
 
-bool is_increasing_number(unsigned int num){
+bool is_increasing_number(size_t num){
   // Init the variable with the smaller digit
-  unsigned int digit = 9;
+  size_t digit = 9;
 
   // Loop over all digits
   while(num > 0){
@@ -30,9 +30,9 @@ bool is_increasing_number(unsigned int num){
 }
 
 
-bool is_decreasing_number(unsigned int num){
+bool is_decreasing_number(size_t num){
   // Init the variable with the greater digit
-  unsigned int digit = 0;
+  size_t digit = 0;
 
   // Loop over all digits
   while(num > 0){
@@ -51,7 +51,7 @@ bool is_decreasing_number(unsigned int num){
 }
 
 
-bool is_bouncy_number(unsigned int num){
+bool is_bouncy_number(size_t num){
   // If is decreasing or increasing number, then is not bouncy number
   if(is_decreasing_number(num) || is_increasing_number(num))
     return false;
@@ -62,15 +62,15 @@ bool is_bouncy_number(unsigned int num){
 }
 
 
-bool is_palindrome(unsigned int num){
+bool is_palindrome(size_t num){
   // Check if num is igual to its reverse
   return num == reverse(num);
 }
 
 
-unsigned int reverse(unsigned int num){
+size_t reverse(size_t num){
   // Init reversed variable
-  unsigned int reversed = 0;
+  size_t reversed = 0;
 
   // Loop over all digits
   while(num > 0){
@@ -86,9 +86,9 @@ unsigned int reverse(unsigned int num){
 }
 
 
-unsigned int sum_digits(unsigned long int num){
+size_t sum_digits(size_t num){
   // Init sum variable with zero
-  unsigned int sum = 0;
+  size_t sum = 0;
 
   // Loop over all digits
   while(num != 0){
@@ -103,9 +103,9 @@ unsigned int sum_digits(unsigned long int num){
 }
 
 
-unsigned int sum_digits_string(std::string num){
+size_t sum_digits_string(std::string num){
   // Init sum variable with zero
-  unsigned int sum = 0;
+  size_t sum = 0;
 
   // Loop over all digits
   // We make the sum of i and size-i-1 digit

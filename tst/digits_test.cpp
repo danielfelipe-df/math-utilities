@@ -3,7 +3,7 @@
  * @author Daniel Felipe <danielfoc@protonmail.com>
  * @date 21/09/2022
  *
- * @brief Test file where are located the TEST_CASE functions.
+ * @brief Test file where are located the TEST_CASE functions for digits
  */
 
 
