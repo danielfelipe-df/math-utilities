@@ -9,6 +9,8 @@
 #ifndef DIVISORS_H
 #define DIVISORS_H
 
+#include <cstddef>
+
 
 /**
  * @brief Return the GCD (Greates Common Divisor) or HCF (Highest Common Factor)
@@ -17,7 +19,7 @@
  * @param n Second number
  * @return GCD of @p m and @p n
  */
-unsigned int gcd_euclides(unsigned int m, unsigned int n);
+size_t gcd_euclides(size_t m, size_t n);
 
 
 /**
@@ -27,7 +29,7 @@ unsigned int gcd_euclides(unsigned int m, unsigned int n);
  * @param n Second number
  * @return GCD of @p m and @p n
  */
-unsigned int gcd_stein(unsigned int m, unsigned int n);
+size_t gcd_stein(size_t m, size_t n);
 
 
 /**
@@ -35,7 +37,7 @@ unsigned int gcd_stein(unsigned int m, unsigned int n);
  * @param num Number for which divisors are sought.
  * @return Number of divisors.
  */
-unsigned int num_divisors(unsigned int num);
+size_t num_divisors(size_t num);
 
 
 /**
@@ -43,7 +45,7 @@ unsigned int num_divisors(unsigned int num);
  * @param num Number for which sum of divisors is done.
  * @return Sum of divisors less than @p num.
  */
-unsigned int sum_divisors(unsigned int num);
+size_t sum_divisors(size_t num);
 
 
 #endif

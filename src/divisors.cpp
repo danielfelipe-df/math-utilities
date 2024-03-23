@@ -11,7 +11,7 @@
 #include <cmath>
 
 
-unsigned int gcd_euclides(unsigned int m, unsigned int n){
+size_t gcd_euclides(size_t m, size_t n){
   if(n == 0)
     return m;
 
@@ -19,7 +19,7 @@ unsigned int gcd_euclides(unsigned int m, unsigned int n){
 }
 
 
-unsigned int gcd_stein(unsigned int m, unsigned int n){
+size_t gcd_stein(size_t m, size_t n){
   //Cases to finish
   if(n == 0)
     return m;
@@ -56,12 +56,12 @@ unsigned int gcd_stein(unsigned int m, unsigned int n){
 }
 
 
-unsigned int num_divisors(unsigned int num){
-  unsigned int count = 0;
+size_t num_divisors(size_t num){
+  size_t count = 0;
   double aux = std::sqrt(num);
 
   // Loop over all the numbers under the sqrt
-  for(unsigned int i=1; i<aux; i++){
+  for(size_t i=1; i<aux; i++){
 
     // Count two divisors if num is divisible by i
     if(num%i == 0)
@@ -76,12 +76,12 @@ unsigned int num_divisors(unsigned int num){
 }
 
 
-unsigned int sum_divisors(unsigned int num){
-  unsigned int sum = 1 + num;
+size_t sum_divisors(size_t num){
+  size_t sum = 1 + num;
   double aux = std::sqrt(num);
 
   //Check all numbers less than sqrt and greater than one
-  for(unsigned int i=2; i<aux; i++){
+  for(size_t i=2; i<aux; i++){
 
     // If is a divisor, sum the value and its opposed
     if(num%i == 0)
