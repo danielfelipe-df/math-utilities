@@ -59,12 +59,3 @@ bool string_is_palindrome(std::string s);
  * corresponds to number 2, one to 3 and then.
  */
 void Cummulative_Prime_Decomposition(unsigned int n, unsigned int *myarray);
-
-
-/**
- * @brief Boolean function that tell us if @p n2 is S-number.
- * @param n2 Number to be checked.
- * @param n @p n2 square root.
- * @return Boolean.
- */
-bool is_S_number(std::string n2, long int n);

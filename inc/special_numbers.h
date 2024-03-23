@@ -43,3 +43,13 @@ bool is_right_truncatable_Harshad_number(size_t num);
  * @return True if is a strong right truncatable Harshad number, False otherwise.
  */
 bool is_strong_right_truncatable_Harshad_number(unsigned long int num);
+
+
+/**
+ * @brief A *S-number* is a natural number @p n that is a perfect square, and its
+ * square root can be obtained by splitting the decimal representation of @p n
+ * into 2 or more numbers then adding the numbers.
+ * @param n Number to be checked.
+ * @return True if @p n is S-number, False otherwise.
+ */
+bool is_S_number(size_t n);

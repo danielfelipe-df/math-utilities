@@ -124,3 +124,32 @@ SCENARIO( "#is_strong_right_truncatable_Harshad_number" ){
     }
   }
 }
+
+
+
+SCENARIO( "#is_S_number" ){
+
+  GIVEN( "A positive number" ){
+
+    WHEN( "it is a S number" ){
+
+      THEN( "must return true" ){
+	REQUIRE(is_S_number(81) == true);
+	REQUIRE(is_S_number(6724) == true);
+	REQUIRE(is_S_number(8281) == true);
+	REQUIRE(is_S_number(9801) == true);
+      }
+    }
+
+
+    WHEN( "it is not a S number" ){
+
+      THEN( "must return false" ){
+	REQUIRE(is_S_number(144) == false);
+	REQUIRE(is_S_number(87683) == false);
+	REQUIRE(is_S_number(897) == false);
+	REQUIRE(is_S_number(400237) == false);
+      }
+    }
+  }
+}
