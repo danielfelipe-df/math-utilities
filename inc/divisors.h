@@ -10,6 +10,7 @@
 #define DIVISORS_H
 
 #include <cstddef>
+#include <vector>
 
 
 /**
@@ -46,6 +47,14 @@ size_t num_divisors(size_t num);
  * @return Sum of divisors less than @p num.
  */
 size_t sum_divisors(size_t num);
+
+
+/**
+ * @brief Return a vector with all prime divisors of @p num
+ * @param num Number to be find its prime divisors
+ * @return Vector with all, and unique, primes divisors of @p num
+ */
+std::vector<size_t> get_prime_divisors_vector(size_t num);
 
 
 #endif

@@ -95,3 +95,40 @@ size_t sum_divisors(size_t num){
 
   return sum;
 }
+
+
+std::vector<size_t> get_prime_divisors_vector(size_t num){
+
+  // Create variable where prime divisors of @p num are saved
+  std::vector<size_t> vec;
+
+  // Check if is divisble by 2
+  if(num%2 == 0){
+
+    // If 2 divides num, then save it in the vector
+    vec.push_back(2);
+
+    // Divides @p num by 2 until it becomes not divisible by 2
+    do
+      num /= 2;
+    while(num%2 == 0);
+  }
+
+  // Loop over odd numbers
+  for(size_t i=3; num!=1; i+=2)
+
+    // Check if is divisble by i
+    if(num%i == 0){
+
+      // If i divides num, then save it in the vector
+      vec.push_back(i);
+
+      // Divides @p num by i until it becomes not divisible by i
+      do
+	num /= i;
+      while(num%i == 0);
+    }
+
+  // Return the vector with divisor primes
+  return vec;
+}

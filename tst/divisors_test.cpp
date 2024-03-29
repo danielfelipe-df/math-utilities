@@ -92,3 +92,22 @@ SCENARIO( "#sum_divisors" ){
     }
   }
 }
+
+
+
+SCENARIO( "#get_prime_divisors_vector" ){
+
+  GIVEN( "A positive number" ){
+
+    THEN( "must return a vector of prime divisors" ){
+      std::vector<size_t> vec_1 = {2, 3};
+      REQUIRE(get_prime_divisors_vector(12) == vec_1);
+      std::vector<size_t> vec_2 = {2, 3, 5, 7, 11, 13, 17, 19, 23};
+      REQUIRE(get_prime_divisors_vector(223092870) == vec_2);
+      std::vector<size_t> vec_3 = {5};
+      REQUIRE(get_prime_divisors_vector(15625) == vec_3);
+      std::vector<size_t> vec_4 = {2, 5, 97};
+      REQUIRE(get_prime_divisors_vector(970) == vec_4);
+    }
+  }
+}
