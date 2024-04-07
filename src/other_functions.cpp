@@ -39,19 +39,6 @@ unsigned int Euler_Totient_Function(unsigned int n){
 }
 
 
-unsigned int sum_amicable_numbers(unsigned int *y, unsigned int N){
-  unsigned int sum = 0;
-  for(unsigned int i=2; i<N; i++){ // Loop over all values less than N and greater than 1
-    if(y[i] < N){ // Check the sum of divisors is less than N
-      if(i == y[y[i]] && i != y[i]){ // Check the number has an amicable different of itself
-	sum += i;
-      }
-    }
-  }
-  return sum;
-}
-
-
 std::string base10_to_base2(unsigned int num){
   std::string base2{};
   while(num > 0){ // While num is greater than 0.

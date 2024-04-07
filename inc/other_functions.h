@@ -22,16 +22,6 @@ unsigned int Euler_Totient_Function(unsigned int n);
 
 
 /**
- * @brief Return the sum of all amicable numbers that are in @p y and are less
- * than @p N.
- * @param y Array containing the sum of divisors less than itself.
- * @param N Upper limit number for the amicable numbers. Also is the @p y 's size.
- * @return Sum of amicable numbers less than @p N.
- */
-unsigned int sum_amicable_numbers(unsigned int *y, unsigned int N);
-
-
-/**
  * @brief Transform @p num in base2. The transformation is using bitiwse
  * operator. Check the link to learn it
  * @see https://www.learncpp.com/cpp-tutorial/bitwise-operators/
