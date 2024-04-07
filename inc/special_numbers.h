@@ -53,3 +53,18 @@ bool is_strong_right_truncatable_Harshad_number(unsigned long int num);
  * @return True if @p n is S-number, False otherwise.
  */
 bool is_S_number(size_t n);
+
+
+/**
+ * @brief A couple of numbers @p n and @p m are considered *amicable* if the sum
+ * proper divisors of @p n is equal to @p m, and the sum of proper divisors (all
+ * divisors except itself) of @p m is equal to @p n.
+ * Note: If S(x) is the function to calculate sum of proper divisors, then for
+ * @p n and @p m amicables we get S(n)+n = S(m)+m because S(n)=m and S(m)=n, and then
+ * m+n=n+m. So it just necessary to check if the sum of all divisors of @p n and
+ * @p m are equal.
+ * @param n First number to be checked.
+ * @param m Second number to be checked.
+ * @return True if @p n is S-number, False otherwise.
+ */
+bool are_amicable_numbers(size_t n, size_t m);

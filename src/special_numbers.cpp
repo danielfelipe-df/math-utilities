@@ -10,6 +10,7 @@
 
 #include <digits.h>
 #include <primes.h>
+#include <divisors.h>
 
 #include <vector>
 #include <cmath>
@@ -149,4 +150,17 @@ bool is_S_number(size_t n){
 
   // If any combination was equal to @p n then is not a S-number
   return false;
+}
+
+
+
+bool are_amicable_numbers(size_t n, size_t m){
+
+  // If any of the numbers is greater than the sum of all numbers smaller than
+  // other, so cannot be amicable
+  if(m > n*(n+1)/2 or n > m*(m+1)/2)
+    return false;
+
+  // Use the function sum_divisors in digits file
+  return sum_divisors(n) == sum_divisors(m);
 }

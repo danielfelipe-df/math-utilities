@@ -153,3 +153,32 @@ SCENARIO( "#is_S_number" ){
     }
   }
 }
+
+
+
+SCENARIO( "#are_amicable_numbers" ){
+
+  GIVEN( "Two positive numbers" ){
+
+    WHEN( "they are amicable numbers" ){
+
+      THEN( "must return true" ){
+	REQUIRE(are_amicable_numbers(220, 284) == true);
+	REQUIRE(are_amicable_numbers(5020, 5564) == true);
+	REQUIRE(are_amicable_numbers(17296, 18416) == true);
+	REQUIRE(are_amicable_numbers(66928, 66992) == true);
+      }
+    }
+
+
+    WHEN( "they are not amicable numbers" ){
+
+      THEN( "must return false" ){
+	REQUIRE(are_amicable_numbers(221, 284) == false);
+	REQUIRE(are_amicable_numbers(87683, 89) == false);
+	REQUIRE(are_amicable_numbers(86657, 23) == false);
+	REQUIRE(are_amicable_numbers(123456, 123450) == false);
+      }
+    }
+  }
+}
