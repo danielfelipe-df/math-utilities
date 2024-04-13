@@ -10,35 +10,6 @@
 #include <string>
 
 
-unsigned int Euler_Totient_Function(unsigned int n){
-  unsigned int result = n; //Init the result
-
-  if(n%2 == 0){ // If n is even then reduce it to its odd form
-    while(n%2 == 0){ // Reduce the number
-      n /= 2;
-    }
-    result -= result/2; // Check that result = result*(1 - 1/p) = result - result/p, then result -= result/p
-  }
-
-  // We do the loop until sqrt because there's ony one prime number (if is exists) greater than sqrt and a divisor of n
-  for(unsigned int i=3; i*i<=n; i+=2){ // Loop over all odd numbers because there is no an even prime number greater than 2.
-    if(n%i == 0){ // Check if i divides n
-      while(n%i == 0){ // Reduce the number n
-	n /= i;
-      }
-      result -= result/i; // Update result
-    }
-  }
-
-  //If n has a prime factor greater than n, then take it
-  if(n > 1){
-    result -= result/n;
-  }
-
-  return result;
-}
-
-
 std::string base10_to_base2(unsigned int num){
   std::string base2{};
   while(num > 0){ // While num is greater than 0.

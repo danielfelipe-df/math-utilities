@@ -74,3 +74,45 @@ bool is_odd_prime(unsigned int num){
   // If any number is a divisor, is prime
   return true;
 }
+
+
+
+size_t calculate_euler_totient_function(size_t n){
+
+  // Init the result
+  size_t result = n;
+
+  // If n is even then reduce it to its odd form
+  if(n%2 == 0){
+
+    // Reduce the number
+    do
+      n /= 2;
+    while(n%2 == 0);
+
+    // Check that result = result*(1 - 1/p) = result - result/p, then result -= result/p
+    result -= result/2;
+  }
+
+  // We do the loop until sqrt because there's ony one prime number (if is exists) greater than sqrt and a divisor of n
+  // Loop over all odd numbers because there is no an even prime number greater than 2.
+  for(unsigned int i=3; i*i<=n; i+=2)
+
+    // Check if i divides n
+    if(n%i == 0){
+
+      // Reduce the number n
+      do
+	n /= i;
+      while(n%i == 0);
+
+      // Update result
+      result -= result/i;
+    }
+
+  //If n has a prime factor greater than n, then take it
+  if(n > 1)
+    result -= result/n;
+
+  return result;
+}

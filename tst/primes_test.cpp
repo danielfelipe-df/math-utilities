@@ -102,3 +102,18 @@ SCENARIO( "#is_odd_prime" ){
     }
   }
 }
+
+
+
+SCENARIO( "#calculate_euler_totient_function" ){
+
+  GIVEN( "A positive number" ){
+
+    THEN( "must return the value of euler totient function" ){
+      REQUIRE(calculate_euler_totient_function(53) == 52);
+      REQUIRE(calculate_euler_totient_function(798988) == 378432);
+      REQUIRE(calculate_euler_totient_function(10000) == 4000);
+      REQUIRE(calculate_euler_totient_function(7392879200) == 2534699520);
+    }
+  }
+}

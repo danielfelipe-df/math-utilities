@@ -11,17 +11,6 @@
 
 
 /**
- * @brief Evaluate the Euler's Totient function for the value @p n using the
- * property \phi(n) = n\prod_{p|n}(1 - 1/p) where p is a prime who divides @p n.
- * The algorithm used is a self variation of the last count found in
- * @see https://www.geeksforgeeks.org/eulers-totient-function/
- * @param n Number to be evaluated
- * @return \phi(n)
- */
-unsigned int Euler_Totient_Function(unsigned int n);
-
-
-/**
  * @brief Transform @p num in base2. The transformation is using bitiwse
  * operator. Check the link to learn it
  * @see https://www.learncpp.com/cpp-tutorial/bitwise-operators/
